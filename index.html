@@ -5,21 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.css">
   <title>Savanna Journeys | Premium Travel Advisory in Kenya</title>
-  <style>
-    :root {
-      --primary-black: #121212;
-      --primary-white: #ffffff;
-      --accent-gray: #e0e0e0;
-      --light-gray: #f5f5f5;
-      --dark-gray: #333333;
-    }
-    
-    
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
   <header>
-    <div class="logo">SAVANNA JOURNEYS</div>
+    <div class="logo"><a href="#home">SAVANNA JOURNEYS</a></div>
     <nav>
       <ul>
         <li><a href="#services">Services</a></li>
@@ -29,38 +23,96 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
   <section class="hero" id="home">
-    <h1>Premium Travel Advisory in Kenya</h1>
-    <p>Tailored experiences for discerning travelers and business professionals seeking the authentic heart of East Africa</p>
-    <a href="#contact" class="btn">Plan Your Journey</a>
+    <div class="hero-slider">
+      <div class="hero-slide active" style="background-image: url('./assets/marasunset.jpg')">
+        <div class="hero-content">
+          <h1>Premium Travel Advisory in Kenya</h1>
+          <p>Tailored experiences for discerning travelers seeking the authentic heart of East Africa</p>
+          <a href="#contact" class="btn">Plan Your Journey</a>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image: url('./assets/hotairbaloon.jpg')">
+        <div class="hero-content">
+          <h1>Extraordinary Wildlife Encounters</h1>
+          <p>Witness the majesty of Africa's most iconic species in their natural habitat</p>
+          <a href="#services" class="btn">Explore Services</a>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image: url('./assets/coastsunset.jpg')">
+        <div class="hero-content">
+          <h1>Coastal Paradise</h1>
+          <p>Experience pristine beaches and the rich Swahili culture along Kenya's coast</p>
+          <a href="#destinations" class="btn">View Destinations</a>
+        </div>
+      </div>
+      <div class="hero-slide video-slide">
+        <video autoplay muted loop>
+          <source src="./assets/grass.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+          <h1>Unforgettable Moments</h1>
+          <p>Create memories that will last a lifetime in Kenya's stunning landscapes</p>
+          <a href="#about" class="btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider-nav">
+      <button class="slider-prev">&#10094;</button>
+      <div class="slider-dots"></div>
+      <button class="slider-next">&#10095;</button>
+    </div>
   </section>
 
   <section class="services" id="services">
     <h2 class="section-title">Our Services</h2>
     <div class="services-grid">
       <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-mountain"></i>
+        </div>
         <h3>Luxury Safari Experiences</h3>
         <p>Exclusive access to Kenya's most prestigious wildlife reserves with expert guides and personalized itineraries.</p>
       </div>
       <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
         <h3>Business Travel Logistics</h3>
         <p>Comprehensive planning for corporate travelers including transport, accommodation, and networking opportunities.</p>
       </div>
       <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-users"></i>
+        </div>
         <h3>Cultural Immersion</h3>
         <p>Authentic experiences with local communities, artisans, and culinary experts for a deeper understanding of Kenya.</p>
       </div>
       <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-spa"></i>
+        </div>
         <h3>Wellness Retreats</h3>
         <p>Rejuvenating escapes combining natural beauty, mindfulness, and traditional healing practices.</p>
       </div>
       <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-leaf"></i>
+        </div>
         <h3>Conservation Experiences</h3>
         <p>Participate in wildlife conservation initiatives and sustainable tourism projects across Kenya.</p>
       </div>
       <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-map-marked-alt"></i>
+        </div>
         <h3>Custom Itineraries</h3>
         <p>Bespoke travel planning tailored to your specific interests, schedule, and preferences.</p>
       </div>
@@ -71,42 +123,43 @@
     <h2 class="section-title">Featured Destinations</h2>
     <div class="gallery">
       <div class="gallery-item">
-        <img src="/api/placeholder/600/400" alt="Maasai Mara">
+        <img src="./assets/mufasa.jpg" alt="Maasai Mara">
         <div class="overlay">
           <h3>Maasai Mara</h3>
           <p>Witness the great migration and abundant wildlife</p>
+          
         </div>
       </div>
       <div class="gallery-item">
-        <img src="/api/placeholder/600/400" alt="Nairobi">
+        <img src="./assets/nairobinightlife.jpg" alt="Nairobi">
         <div class="overlay">
           <h3>Nairobi</h3>
           <p>Kenya's vibrant capital and business hub</p>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="/api/placeholder/600/400" alt="Diani Beach">
+        <img src="./assets/whitssands.jpg" alt="Diani Beach">
         <div class="overlay">
           <h3>Diani Beach</h3>
           <p>Pristine white sands and crystal clear waters</p>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="/api/placeholder/600/400" alt="Mount Kenya">
+        <img src="./assets/mtkenya.jpg" alt="Mount Kenya">
         <div class="overlay">
           <h3>Mount Kenya</h3>
           <p>Africa's second-highest peak with breathtaking landscapes</p>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="/api/placeholder/600/400" alt="Lamu Island">
+        <img src="./assets/lamuold.jpg" alt="Lamu Island">
         <div class="overlay">
           <h3>Lamu Island</h3>
           <p>UNESCO World Heritage site with rich Swahili culture</p>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="/api/placeholder/600/400" alt="Amboseli">
+        <img src="./assets/elephant.jpg" alt="Amboseli">
         <div class="overlay">
           <h3>Amboseli</h3>
           <p>Iconic views of Mt. Kilimanjaro and elephant herds</p>
@@ -114,6 +167,17 @@
       </div>
     </div>
   </section>
+
+  <div class="video-feature">
+    <video autoplay muted loop>
+      <source src="./assets/lions.mp4" type="video/mp4">
+    </video>
+    <div class="video-content">
+      <h2>Experience the Wild</h2>
+      <p>Immerse yourself in the natural beauty and magnificent wildlife of Kenya</p>
+      <a href="#contact" class="btn btn-light">Start Planning</a>
+    </div>
+  </div>
 
   <section class="about" id="about">
     <h2 class="section-title">About Our Service</h2>
@@ -126,49 +190,55 @@
         <p>Every itinerary is crafted with attention to detail, prioritizing your comfort, security, and unique interests while showcasing the true essence of Kenya.</p>
       </div>
       <div class="about-image">
-        <img src="/api/placeholder/600/400" alt="Travel advisor in Kenya">
+        <img src="./assets/giraffemanor.jpg" alt="Travel advisor in Kenya">
       </div>
     </div>
   </section>
 
   <section class="testimonials" id="testimonials">
     <h2 class="section-title">Client Testimonials</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          <p>"Our safari experience was flawless from start to finish. The attention to detail and insider knowledge made all the difference. We saw the Big Five in just two days!"</p>
+    <div class="testimonial-container">
+      <div class="testimonial-slider">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Our safari experience was flawless from start to finish. The attention to detail and insider knowledge made all the difference. We saw the Big Five in just two days!"</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="./assets/peakkenya.jpg" alt="Client photo">
+            <div>
+              <h4>Sarah Johnson</h4>
+              <p>Executive, United Kingdom</p>
+            </div>
+          </div>
         </div>
-        <div class="testimonial-author">
-          <img src="/api/placeholder/100/100" alt="Client photo">
-          <div>
-            <h4>Sarah Johnson</h4>
-            <p>Executive, United Kingdom</p>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"As a business traveler with a tight schedule, the logistics support was invaluable. My meetings in Nairobi and Mombasa went perfectly, with time left to enjoy some local experiences."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="./assets/karenmuseum.jpg" alt="Client photo">
+            <div>
+              <h4>Michael Chen</h4>
+              <p>Tech Entrepreneur, Singapore</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"The cultural immersion aspects of our trip were the highlight. Connecting with Maasai communities and learning traditional crafts gave us insights we never would have had otherwise."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="./assets/coast.jpg" alt="Client photo">
+            <div>
+              <h4>Emma & David Rodriguez</h4>
+              <p>Photographers, Spain</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          <p>"As a business traveler with a tight schedule, the logistics support was invaluable. My meetings in Nairobi and Mombasa went perfectly, with time left to enjoy some local experiences."</p>
-        </div>
-        <div class="testimonial-author">
-          <img src="/api/placeholder/100/100" alt="Client photo">
-          <div>
-            <h4>Michael Chen</h4>
-            <p>Tech Entrepreneur, Singapore</p>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          <p>"The cultural immersion aspects of our trip were the highlight. Connecting with Maasai communities and learning traditional crafts gave us insights we never would have had otherwise."</p>
-        </div>
-        <div class="testimonial-author">
-          <img src="/api/placeholder/100/100" alt="Client photo">
-          <div>
-            <h4>Emma & David Rodriguez</h4>
-            <p>Photographers, Spain</p>
-          </div>
-        </div>
+      <div class="testimonial-nav">
+        <button class="testimonial-prev">&#10094;</button>
+        <button class="testimonial-next">&#10095;</button>
       </div>
     </div>
   </section>
@@ -184,18 +254,18 @@
         <p><strong>Office:</strong> Riverside Drive, Nairobi, Kenya</p>
       </div>
       <div class="contact-form">
-        <form>
+        <form id="contactForm" action="mailto:irungumuiruri1@gmail.com" method="post" enctype="text/plain">
           <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" name="name" required>
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" name="email" required>
           </div>
           <div class="form-group">
             <label for="travel-type">Travel Purpose</label>
-            <select id="travel-type">
+            <select id="travel-type" name="travel-type">
               <option value="leisure">Leisure</option>
               <option value="business">Business</option>
               <option value="mixed">Combined Business & Leisure</option>
@@ -204,28 +274,61 @@
           </div>
           <div class="form-group">
             <label for="message">Your Travel Vision</label>
-            <textarea id="message" required></textarea>
+            <textarea id="message" name="message" required></textarea>
           </div>
-          <button type="submit" class="btn">Send Inquiry</button>
+          <button type="submit" class="btn submit-btn">Send Inquiry</button>
         </form>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="logo">SAVANNA JOURNEYS</div>
-    <div class="social-icons">
-      <a href="#">FB</a>
-      <a href="#">IG</a>
-      <a href="#">TW</a>
-      <a href="#">LI</a>
+    <div class="footer-top">
+      <div class="footer-logo">
+        <div class="logo">SAVANNA JOURNEYS</div>
+        <p>Premium Travel Advisory in Kenya</p>
+      </div>
+      
+      <div class="footer-newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn newsletter-btn">Subscribe</button>
+        </form>
+      </div>
     </div>
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-      <a href="#">Sustainability Commitment</a>
+    
+    <div class="footer-middle">
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sustainability Commitment</a>
+      </div>
     </div>
-    <p>&copy; 2025 Savanna Journeys. All rights reserved.</p>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Savanna Journeys. All rights reserved.</p>
+    </div>
   </footer>
+
+  <div class="video-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <video controls>
+        <source src="" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- Add Font Awesome for icons before the closing body tag -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
